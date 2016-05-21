@@ -9,11 +9,17 @@ class LoginFB: UIViewController, FBSDKLoginButtonDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if(FBSDKAccessToken.currentAccessToken() == nil){print("not logged...")}
         loginBtn.readPermissions = ["public_profile","email","user_friends"]
         loginBtn.center = self.view.center
         loginBtn.delegate = self
         self.view.addSubview(loginBtn)
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        let access:FBSDKAccessToken! = FBSDKAccessToken.currentAccessToken()
+        if((access) != nil) {
+            appDel?.switchTo("addPage")
+        }
     }
     
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {

@@ -1,5 +1,6 @@
 import UIKit
 import CoreData
+import Alamofire
 
 class StoredStudentsTVC: UITableViewController {
     
@@ -38,7 +39,7 @@ class StoredStudentsTVC: UITableViewController {
         let student = students[indexPath.row]
         cell.textLabel?.text = student.firstName
         cell.detailTextLabel?.text = student.lastName
-        
+        cell.imageView?.image = UIImage(data: student.image!)
         return cell
     }
     
@@ -49,8 +50,11 @@ class StoredStudentsTVC: UITableViewController {
         do{
             students = try context?.executeFetchRequest(request) as! [Student]
         }catch{
-            let errorMsg = UIAlertView(title: "Error", message: "Not matched with the data", delegate: nil, cancelButtonTitle: "Ok")
-            errorMsg.show()
+            let popup = UIAlertController(title: "error", message: "Can't fetch data", preferredStyle: .Alert)
+            let okAct = UIAlertAction(title: "ok", style: .Default) {(UIAlertAction) in
+            }
+            popup.addAction(okAct)
+            self.presentViewController(popup, animated: true, completion: nil)
         }
         self.tableView.reloadData()
         

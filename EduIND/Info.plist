@@ -17,6 +17,11 @@
     <key>FacebookDisplayName</key>
     <string>EduIND</string>
     
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key><true/>
+    </dict>
+    
     <key>LSApplicationQueriesSchemes</key>
     <array>
         <string>fbapi</string>

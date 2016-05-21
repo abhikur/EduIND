@@ -27,8 +27,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func switchTo(view: String) {
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
-        let nav = storyboard.instantiateViewControllerWithIdentifier(view)
-        self.window?.rootViewController = nav
+        let vc = storyboard.instantiateViewControllerWithIdentifier(view)
+        self.window?.rootViewController = vc
     }
 
     lazy var applicationDocumentsDirectory: NSURL = {
