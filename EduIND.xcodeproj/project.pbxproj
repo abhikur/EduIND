@@ -9,13 +9,15 @@
 /* Begin PBXBuildFile section */
 		0F4950F0ADB83E1ECAAE73D6 /* Pods_EduINDTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37C652CF06792B9C0BC81924 /* Pods_EduINDTests.framework */; };
 		82B18FDE98784F3FBB9A4B65 /* Pods_EduIND.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7608248B8CBEFE201C833C56 /* Pods_EduIND.framework */; };
+		8EB694221CFDFB3A00B30A21 /* StudentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB694211CFDFB3A00B30A21 /* StudentTableViewCell.swift */; };
+		8EE64FA21CFD2D57004898A3 /* StoredStudentsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE64FA11CFD2D57004898A3 /* StoredStudentsTVC.swift */; };
+		8EE64FA71CFD2F1E004898A3 /* StudentDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE64FA61CFD2F1E004898A3 /* StudentDetailVC.swift */; };
 		8EF052DD1CE39D640000AC11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF052DC1CE39D640000AC11 /* AppDelegate.swift */; };
 		8EF052E21CE39D640000AC11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EF052E01CE39D640000AC11 /* Main.storyboard */; };
 		8EF052E51CE39D640000AC11 /* EduIND.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8EF052E31CE39D640000AC11 /* EduIND.xcdatamodeld */; };
 		8EF052E71CE39D640000AC11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EF052E61CE39D640000AC11 /* Assets.xcassets */; };
 		8EF052EA1CE39D640000AC11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EF052E81CE39D640000AC11 /* LaunchScreen.storyboard */; };
 		8EF052F51CE39D640000AC11 /* EduINDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF052F41CE39D640000AC11 /* EduINDTests.swift */; };
-		8EF053001CE39F140000AC11 /* StoredStudentsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF052FF1CE39F140000AC11 /* StoredStudentsTVC.swift */; };
 		8EF053021CE3A1610000AC11 /* LoginFB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF053011CE3A1600000AC11 /* LoginFB.swift */; };
 		8EF053041CE3A1C40000AC11 /* SaveStudentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF053031CE3A1C40000AC11 /* SaveStudentVC.swift */; };
 		8EF053071CE3A4140000AC11 /* Student+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF053051CE3A4140000AC11 /* Student+CoreDataProperties.swift */; };
@@ -36,6 +38,9 @@
 		021895423A3C292B0C620182 /* Pods-EduINDTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EduINDTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EduINDTests/Pods-EduINDTests.debug.xcconfig"; sourceTree = "<group>"; };
 		37C652CF06792B9C0BC81924 /* Pods_EduINDTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EduINDTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7608248B8CBEFE201C833C56 /* Pods_EduIND.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EduIND.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EB694211CFDFB3A00B30A21 /* StudentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentTableViewCell.swift; sourceTree = "<group>"; };
+		8EE64FA11CFD2D57004898A3 /* StoredStudentsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoredStudentsTVC.swift; sourceTree = "<group>"; };
+		8EE64FA61CFD2F1E004898A3 /* StudentDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentDetailVC.swift; sourceTree = "<group>"; };
 		8EF052D91CE39D640000AC11 /* EduIND.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EduIND.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EF052DC1CE39D640000AC11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EF052E11CE39D640000AC11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -46,7 +51,6 @@
 		8EF052F01CE39D640000AC11 /* EduINDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EduINDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EF052F41CE39D640000AC11 /* EduINDTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EduINDTests.swift; sourceTree = "<group>"; };
 		8EF052F61CE39D640000AC11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8EF052FF1CE39F140000AC11 /* StoredStudentsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoredStudentsTVC.swift; sourceTree = "<group>"; };
 		8EF053011CE3A1600000AC11 /* LoginFB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginFB.swift; sourceTree = "<group>"; };
 		8EF053031CE3A1C40000AC11 /* SaveStudentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveStudentVC.swift; sourceTree = "<group>"; };
 		8EF053051CE3A4140000AC11 /* Student+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Student+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -85,6 +89,38 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8EE64FA31CFD2D98004898A3 /* StudentModel */ = {
+			isa = PBXGroup;
+			children = (
+				8EF053061CE3A4140000AC11 /* Student.swift */,
+				8EF052E31CE39D640000AC11 /* EduIND.xcdatamodeld */,
+				8EF053051CE3A4140000AC11 /* Student+CoreDataProperties.swift */,
+			);
+			name = StudentModel;
+			sourceTree = "<group>";
+		};
+		8EE64FA41CFD2DB8004898A3 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				8EF052EB1CE39D640000AC11 /* Info.plist */,
+				8EF052E81CE39D640000AC11 /* LaunchScreen.storyboard */,
+				8EF052DC1CE39D640000AC11 /* AppDelegate.swift */,
+			);
+			name = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		8EE64FA51CFD2DDE004898A3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8EE64FA11CFD2D57004898A3 /* StoredStudentsTVC.swift */,
+				8EF053011CE3A1600000AC11 /* LoginFB.swift */,
+				8EF053031CE3A1C40000AC11 /* SaveStudentVC.swift */,
+				8EE64FA61CFD2F1E004898A3 /* StudentDetailVC.swift */,
+				8EB694211CFDFB3A00B30A21 /* StudentTableViewCell.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		8EF052D01CE39D640000AC11 = {
 			isa = PBXGroup;
 			children = (
@@ -108,17 +144,11 @@
 		8EF052DB1CE39D640000AC11 /* EduIND */ = {
 			isa = PBXGroup;
 			children = (
-				8EF053051CE3A4140000AC11 /* Student+CoreDataProperties.swift */,
-				8EF053061CE3A4140000AC11 /* Student.swift */,
-				8EF052DC1CE39D640000AC11 /* AppDelegate.swift */,
-				8EF052FF1CE39F140000AC11 /* StoredStudentsTVC.swift */,
-				8EF053011CE3A1600000AC11 /* LoginFB.swift */,
-				8EF053031CE3A1C40000AC11 /* SaveStudentVC.swift */,
+				8EE64FA51CFD2DDE004898A3 /* Controllers */,
+				8EE64FA41CFD2DB8004898A3 /* SupportingFiles */,
+				8EE64FA31CFD2D98004898A3 /* StudentModel */,
 				8EF052E01CE39D640000AC11 /* Main.storyboard */,
 				8EF052E61CE39D640000AC11 /* Assets.xcassets */,
-				8EF052E81CE39D640000AC11 /* LaunchScreen.storyboard */,
-				8EF052EB1CE39D640000AC11 /* Info.plist */,
-				8EF052E31CE39D640000AC11 /* EduIND.xcdatamodeld */,
 			);
 			path = EduIND;
 			sourceTree = "<group>";
@@ -347,9 +377,11 @@
 			files = (
 				8EF053071CE3A4140000AC11 /* Student+CoreDataProperties.swift in Sources */,
 				8EF053041CE3A1C40000AC11 /* SaveStudentVC.swift in Sources */,
+				8EE64FA21CFD2D57004898A3 /* StoredStudentsTVC.swift in Sources */,
+				8EE64FA71CFD2F1E004898A3 /* StudentDetailVC.swift in Sources */,
 				8EF052DD1CE39D640000AC11 /* AppDelegate.swift in Sources */,
+				8EB694221CFDFB3A00B30A21 /* StudentTableViewCell.swift in Sources */,
 				8EF053021CE3A1610000AC11 /* LoginFB.swift in Sources */,
-				8EF053001CE39F140000AC11 /* StoredStudentsTVC.swift in Sources */,
 				8EF053081CE3A4140000AC11 /* Student.swift in Sources */,
 				8EF052E51CE39D640000AC11 /* EduIND.xcdatamodeld in Sources */,
 			);

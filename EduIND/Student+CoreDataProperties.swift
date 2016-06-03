@@ -14,8 +14,12 @@ import CoreData
 
 extension Student {
 
-    @NSManaged var firstName: String?
-    @NSManaged var lastName: String?
+    @NSManaged var name: String?
+    @NSManaged var age: String?
+    @NSManaged var city: String?
+    @NSManaged var state: String?
+    @NSManaged var country: String?
     @NSManaged var image: NSData?
+    @NSManaged var desc: String?
 
 }

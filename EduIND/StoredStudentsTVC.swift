@@ -9,6 +9,7 @@ class StoredStudentsTVC: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -34,12 +35,12 @@ class StoredStudentsTVC: UITableViewController {
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! StudentTableViewCell
         
         let student = students[indexPath.row]
-        cell.textLabel?.text = student.firstName
-        cell.detailTextLabel?.text = student.lastName
-        cell.imageView?.image = UIImage(data: student.image!)
+        cell.studentName.text = student.name!
+        cell.studentAge.text = student.age!
+        cell.studentImg.image = UIImage(data: student.image!)
         return cell
     }
     
@@ -83,5 +84,14 @@ class StoredStudentsTVC: UITableViewController {
         presentViewController(alertView, animated: true, completion: nil)
         
         
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let indexPath = tableView.indexPathForSelectedRow
+        if(segue.identifier == "showDetail") {
+            let vc = segue.destinationViewController as! StudentDetailVC
+            let student = students[(indexPath?.row)!]
+            vc.setDetails(student.name!, age: student.age!, city: student.city!, state: student.state!, country: student.country!, desc: student.desc!, image: student.image!)
+        }
     }
 }
