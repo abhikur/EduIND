@@ -18,17 +18,28 @@ class LoginFB: UIViewController, FBSDKLoginButtonDelegate {
     override func viewWillAppear(animated: Bool) {
         let access:FBSDKAccessToken! = FBSDKAccessToken.currentAccessToken()
         if((access) != nil) {
+            print(access)
             appDel?.switchTo("addPage")
         }
     }
     
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
-        if error == nil{
-            print("Login complete.")
-            appDel?.switchTo("addPage")
-        }
-        else{
-            print(error.localizedDescription)
+        let loginManager = FBSDKLoginManager()
+        let permissions = ["public_profile"]
+        loginManager.logInWithReadPermissions(permissions, fromViewController: self) { (result, error) in
+            print(result.isCancelled)
+            if((error) != nil) {
+                print(error.localizedDescription)
+            }
+            else if(result.isCancelled == true) {
+                print("Cancelled")
+                self.appDel?.switchTo("Root")
+            }
+            else{
+                print("Login complete.")
+                print("Profile == ", FBSDKProfile.currentProfile())
+                self.appDel?.switchTo("addPage")
+            }
         }
     }
     

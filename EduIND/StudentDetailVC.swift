@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FBSDKCoreKit
+import FBSDKLoginKit
 
 class StudentDetailVC: UIViewController {
     @IBOutlet weak var studentName: UILabel!
@@ -39,4 +41,9 @@ class StudentDetailVC: UIViewController {
         self.image = image
     }
     
+    @IBAction func aggignTo(sender: UIButton) {
+        if((FBSDKAccessToken.currentAccessToken()) != nil) {
+            
+        }
+    }
 }

@@ -8,6 +8,7 @@
         <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="teacher" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="tutor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Teacher" inverseName="student" inverseEntity="Teacher" syncable="YES"/>
     </entity>
     <entity name="Teacher" syncable="YES">
@@ -16,6 +17,7 @@
         <relationship name="student" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Student" inverseName="tutor" inverseEntity="Student" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Student" positionX="-63" positionY="-18" width="128" height="150"/>
+        <element name="Student" positionX="-63" positionY="-18" width="128" height="163"/>
+        <element name="Teacher" positionX="-261" positionY="21" width="128" height="90"/>
     </elements>
 </model>

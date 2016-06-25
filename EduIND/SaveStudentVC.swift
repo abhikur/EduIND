@@ -60,18 +60,8 @@ class SaveStudentVC: UIViewController, UINavigationControllerDelegate, UIImagePi
         }
         popup.addAction(okAct)
         self.presentViewController(popup, animated: true, completion: nil)
+        postRequest()
         
-        
-    }
-    
-    func postRequest() {
-        Alamofire.request(.GET, "http://localhost:3000", parameters: nil, encoding: ParameterEncoding.URL, headers: nil)
-            .response { (req, res, data, error) in
-                print(data!, req, res, error)
-            }
-            .responseJSON { (res) in
-                print(res)
-        }
     }
     
     func selectImage() {
@@ -98,20 +88,20 @@ class SaveStudentVC: UIViewController, UINavigationControllerDelegate, UIImagePi
     }
     
     func postRequest() {
-        Alamofire.request(.GET, "http://localhost:3000", parameters: nil, encoding: ParameterEncoding.URL, headers: nil)
-            .responseJSON { (res) in
-                let response = res.result.value as! NSDictionary
-                print("aa gya= ", response.objectForKey("Name"))
-                print("Another res= ", res)
-        }
         
         let parameters: [String: String] = [
             "Name": name.text!,
         ]
         
-        Alamofire.request(.POST, "http://localhost:3000/saveUser", parameters: parameters, encoding: ParameterEncoding.JSON, headers: ["Content-Type":"application/json"])
-            .responseJSON { (res) in
-                print(res)
+        Alamofire.request(.POST, "http://localhost:3000/saveUser", parameters: parameters, encoding: .JSON, headers: ["Content-Type":"application/json"])
+            .responseJSON { res in
+                guard res.result.error == nil else{
+                    print(res.result.error)
+                    return
+                }
+                if let value = res.result.value {
+                    print(value)
+                }
         }
     }
 }
